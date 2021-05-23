@@ -8,4 +8,4 @@ RASA is an open-source framework used to Build contextual AI assistants and chat
 
 # Demonstration:
 
-https://github.com/stutisehgal/RASA-Mental-Health-Chatbot/blob/master/rasa%20op.PNG
+<img src= "https://github.com/stutisehgal/RASA-Mental-Health-Chatbot/blob/master/rasa%20op.PNG">
