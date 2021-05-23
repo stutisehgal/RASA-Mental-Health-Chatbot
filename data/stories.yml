@@ -1,0 +1,77 @@
+version: "2.0"
+## map intents in nlu to actions in domain
+stories:
+
+- story: survey yes
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_great
+  - action: utter_survey
+  - intent: affirm
+  - action: utter_gender
+  - intent: gender
+  - action: utter_employment
+  - intent: self_employment
+  - action: utter_history_mental_illness
+  - intent: history_mental_illness
+  - action: utter_work_interference
+  - intent: work_interference
+  - action: utter_company_no_employees
+  - intent: company_no_employees
+  - action: utter_tech_company
+  - intent: tech_company
+  - action: utter_health_benefits
+  - intent: health_benefits
+  - action: utter_health_resources
+  - intent: health_resources
+  - action: utter_treatment_anonymity
+  - intent: treatment_anonymity
+  - action: utter_medical_leave
+  - intent: medical_leave
+  - action: utter_discussing_mental_health
+  - intent: discussing_mental_health
+  - action: utter_willing_to_discuss_collegaue
+  - intent: willing_to_discuss_collegaue
+  - action: utter_willing_to_discuss_employer
+  - intent: willing_to_discuss_employer
+  - action: utter_serious_mental_health
+  - intent: serious_mental_health
+  - action: utter_negative_consequences_mental_coworker
+  - intent: negative_consequences_mental_coworker
+  - action: utter_welcome
+  
+- story: survey no
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_great
+  - action: utter_survey
+  - intent: deny
+  - action: utter_iamabot
+  - action: utter_goodbye
+  
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_welcome
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_mood
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up_two
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_welcome
+  - action: utter_goodbye
